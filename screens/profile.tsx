@@ -29,6 +29,7 @@ import {Heading, Paragraph} from '../components/text';
 import Field from '../components/form'
 import { ProfileButton } from '../components/button';
 import ImagePicker from '../components/image_picker'
+import { FormattedMessage } from 'react-intl';
 
 
 const onSave = (fullname, phone, address, email, imgData, imgName) => {
@@ -110,18 +111,18 @@ export default function ProfileScreen({navigation}) {
             : 'Hustle Shopper'}
         </Text>
       </View>
-      <Heading heading="Actions" />
+      <Heading heading={<FormattedMessage id="actions" />} />
       <ProfileButton action={() => {
             navigation.navigate('Manage Storefront');
-          }} label={"Manage Storefront"} />
+          }} label={<FormattedMessage id="manage_store" />} />
       <ProfileButton action={() => {
             navigation.navigate('Subscriptions');
-          }} label={"Browse Subscriptions"} />
+          }} label={<FormattedMessage id="browse_subscriptions" />} />
 
-      <Heading heading="User Details" />
+      <Heading heading={<FormattedMessage id="user_details" />} />
       <ImagePicker 
         initial={data.photo}
-        label={"Profile Photo"}
+        label={<FormattedMessage id="profile_photo" />}
         onImageChange={setImgData}
         onNameChange={setImgName} />
       <Field value={fullname} onTextChange={setFullName} label={"Full Name"} />
@@ -130,7 +131,7 @@ export default function ProfileScreen({navigation}) {
       <Field value={address} multiline onTextChange={setAddress} label={"Address"} />
 
       <Heading heading="KYC" />
-        <Paragraph>Manage your "Know your customer(KYC) to get even more out of Hustle Hub".</Paragraph>
+        <Paragraph>{<FormattedMessage id="profile_kyc_description" />}.</Paragraph>
         <Pressable
         onPress={() => navigation.navigate("KYC Information")}
         style={styles.kyc}>
