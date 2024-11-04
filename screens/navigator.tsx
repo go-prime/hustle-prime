@@ -324,7 +324,13 @@ export default function HomeScreenNavigator(props): JSX.Element {
       />
       <Drawer.Screen component={ProfileScreen} name="Profile" />
       <Drawer.Screen component={SearchScreen} name="Search" />
-      <Drawer.Screen component={SubscriptionListScreen} name="Subscriptions" />
+      
+      <Drawer.Screen 
+          component={SubscriptionListScreen} 
+          name="Subscriptions" 
+          options={{ title: <FormattedMessage id="subscriptions" /> }} 
+      />
+      
       <Drawer.Screen component={SubscriptionScreen} name="Subscription" />
       <Drawer.Screen component={KYCForm} name="KYC Information" />
       <Drawer.Screen

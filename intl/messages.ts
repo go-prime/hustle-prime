@@ -51,7 +51,9 @@ const messages = {
         checkout_button_text: 'Checkout',
         cart_page: 'Cart',
         produce_category: 'Product Category',
-        subscriptions: 'Subscriptions'
+        subscriptions: 'Subscriptions',
+        buy: "Purchase",
+        subscription_history: "Subscription History"
 
     },
     sn: {
@@ -104,7 +106,9 @@ const messages = {
         checkout_button_text: 'Tenga',
         cart_page: 'Zvitengwa',
         produce_category: 'Mhando yeMudziyo',
-        subscriptions: 'Masubscription'
+        subscriptions: 'Masubscription',
+        buy: 'Tenga',
+        subscription_history: 'Nhorondo Yemasubscription'
     } 
 }
 
